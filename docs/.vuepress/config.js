@@ -28,6 +28,7 @@ module.exports = {
      * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
      */
     themeConfig: {
+        logo: '/img/晴朗.png',
         lastUpdated: 'last Updated', //文档更新时间
         nav: require('./nav'),
         sidebar: require('./sidebar')

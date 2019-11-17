@@ -1,19 +1,19 @@
 <template>
   <div class="features">
-    <div class="feature part1">
-      <h2>自学相关</h2>
+    <div class="feature" >
+      <div class="part1"><h2 >自学相关</h2></div>  
       <span>看技术书籍相关知识点，一些薄弱点的自主补充，感兴趣的知识点等</span>  
     </div>
-    <div class="feature part2">
-      <h2>工作相关</h2>
+    <div class="feature">
+      <div class="part2"><h2>工作相关</h2></div>  
       <span>工作中用到的技术点，以及遇到的坑，相关解决办法等</span>
     </div>
-    <div class="feature part3">
-      <h2>语言相关</h2>
+    <div class="feature">
+      <div class="part3"><h2>语言相关</h2></div>
       <span>用来记录日常看到的英文新闻有趣的知识点，以及动漫中日语相关的内容</span>
     </div>
-    <div class="feature part4">
-      <h2>其他</h2>
+    <div class="feature">
+      <div class="part4"><h2>其他</h2></div>   
       <span>包括网络，算法，数据结构等相关内容</span>
     </div>
   </div>
@@ -25,6 +25,8 @@
       return {
         msg: 'Hello this is <demo-component>'
       }
+    },
+    methods:{
     }
   }
 </script>
