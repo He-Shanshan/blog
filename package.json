@@ -1,21 +1,26 @@
 {
-  "name": "blog",
-  "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
-  "authors": {
-    "name": "",
-    "email": ""
-  },
-  "repository": "/blog",
-  "scripts": {
-    "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
-  },
-  "license": "MIT",
-  "devDependencies": {
-    "vuepress": "^1.0.0",
-    "@vuepress/plugin-back-to-top": "^1.0.0",
-    "@vuepress/plugin-medium-zoom": "^1.0.0"
-  }
+    "name": "blog",
+    "version": "0.0.1",
+    "description": "vuepress for blog",
+    "main": "index.js",
+    "authors": {
+        "name": "shanshan",
+        "email": ""
+    },
+    "repository": "/blog",
+    "scripts": {
+        "dev": "vuepress dev docs",
+        "build": "vuepress build docs"
+    },
+    "license": "MIT",
+    "devDependencies": {
+        "@vuepress/plugin-back-to-top": "^1.0.0",
+        "@vuepress/plugin-medium-zoom": "^1.0.0",
+        "vuepress": "^1.0.0"
+    },
+    "dependencies": {
+        "highlight.js": "^9.16.2",
+        "sass-loader": "^8.0.0",
+        "vue-highlight.js": "^3.1.0"
+    }
 }

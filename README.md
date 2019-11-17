@@ -8,10 +8,10 @@
 yarn dev
 yarn build
 ```
-
-For more details, please head VuePress's [documentation](https://v1.vuepress.vuejs.org/).
-doc目录个性化配置
-components 组件可以在markdown中使用
-styles index->自定义样式 palette全局
-个性化主题
-在config.js 中的theme更改
+## Description
+``` txt
+本项目基于vuepress
+version 1.01
+由于时间过于仓促自定义主题目前还未写，只是在原有结构样式上面做了简单修改
+日后会进行迭代
+```

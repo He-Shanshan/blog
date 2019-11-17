@@ -1,15 +1,19 @@
 ---
+
 home: true
-heroImage: https://v1.vuepress.vuejs.org/hero.png
+heroImage: /img/home-logo.png
 tagline: 
-actionText: Quick Start →
+actionText: 开始探索 →
 actionLink: /guide/
 features:
-- title: Feature 1 Title
-  details: Feature 1 Description
-- title: Feature 2 Title
-  details: Feature 2 Description
-- title: Feature 3 Title
-  details: Feature 3 Description
-footer: Made by  with ❤️
+- title: 自学相关
+  details: 看技术书籍相关知识点，一些薄弱点的自主补充，感兴趣的知识点等
+- title: 工作相关
+  details: 工作中用到的技术点，以及遇到的坑，相关解决办法等
+- title: 语言相关
+  details: 用来记录日常看到的英文新闻有趣的知识点，以及动漫中日语相关的内容
+footer:  MIT Licensed | Copyright ©2019.11-present shan
 ---
+
+
+
