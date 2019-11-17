@@ -15,6 +15,7 @@ module.exports = {
      * ref：https://v1.vuepress.vuejs.org/config/#head
      */
     head: [
+        ['link', { rel: 'stylesheet', href: '/css/style.css' }],
         ['link', { rel: 'icon', href: '/img/彩虹.png' }],
         ['meta', { name: 'theme-color', content: '#3eaf7c' }],
         ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],

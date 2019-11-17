@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/Cellar/node/12.10.0/bin/node /usr/local/bin/yarn add prism.js
+  /usr/local/Cellar/node/12.10.0/bin/node /usr/local/bin/yarn add scss.loader
 
 PATH: 
   /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Library/Apple/bin
@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: http://registry.npm.taobao.org/prism.js: Not found
+  Error: http://registry.npm.taobao.org/scss.loader: Not found
       at Request.params.callback [as _callback] (/usr/local/lib/node_modules/yarn/lib/cli.js:66926:18)
       at Request.self.callback (/usr/local/lib/node_modules/yarn/lib/cli.js:140564:22)
       at Request.emit (events.js:209:13)
