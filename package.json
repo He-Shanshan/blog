@@ -19,6 +19,7 @@
         "vuepress": "^1.0.0"
     },
     "dependencies": {
+        "git": "^0.1.5",
         "highlight.js": "^9.16.2",
         "sass-loader": "^8.0.0",
         "vue-highlight.js": "^3.1.0"
