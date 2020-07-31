@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>生命周期和运行机制 | Smile ^o^</title>
+    <meta name="description" content="记录日常工作、学习的知识">
+    <link rel="icon" href="/blog/img/彩虹.png">
+  <meta name="theme-color" content="#3eaf7c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.00fe1ddf.css" as="style"><link rel="preload" href="/blog/assets/js/app.691678be.js" as="script"><link rel="preload" href="/blog/assets/js/2.ba034f29.js" as="script"><link rel="preload" href="/blog/assets/js/78.53f09210.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.632bd915.js"><link rel="prefetch" href="/blog/assets/js/11.772f967c.js"><link rel="prefetch" href="/blog/assets/js/12.ff26e0aa.js"><link rel="prefetch" href="/blog/assets/js/13.1b8f9604.js"><link rel="prefetch" href="/blog/assets/js/14.9a7df919.js"><link rel="prefetch" href="/blog/assets/js/15.4d6a21fd.js"><link rel="prefetch" href="/blog/assets/js/16.666db653.js"><link rel="prefetch" href="/blog/assets/js/17.a797cfe4.js"><link rel="prefetch" href="/blog/assets/js/18.a045528b.js"><link rel="prefetch" href="/blog/assets/js/19.095e5a15.js"><link rel="prefetch" href="/blog/assets/js/20.0c5e41ec.js"><link rel="prefetch" href="/blog/assets/js/21.10c1c22c.js"><link rel="prefetch" href="/blog/assets/js/22.3d274259.js"><link rel="prefetch" href="/blog/assets/js/23.e9ce92b2.js"><link rel="prefetch" href="/blog/assets/js/24.c97a23b6.js"><link rel="prefetch" href="/blog/assets/js/25.1e14926e.js"><link rel="prefetch" href="/blog/assets/js/26.752bade9.js"><link rel="prefetch" href="/blog/assets/js/27.dc5a3e6b.js"><link rel="prefetch" href="/blog/assets/js/28.9d7929bc.js"><link rel="prefetch" href="/blog/assets/js/29.8bcca565.js"><link rel="prefetch" href="/blog/assets/js/3.a37b7841.js"><link rel="prefetch" href="/blog/assets/js/30.5d40f78a.js"><link rel="prefetch" href="/blog/assets/js/31.a7862089.js"><link rel="prefetch" href="/blog/assets/js/32.9ab020d3.js"><link rel="prefetch" href="/blog/assets/js/33.61af89c7.js"><link rel="prefetch" href="/blog/assets/js/34.ef67e138.js"><link rel="prefetch" href="/blog/assets/js/35.b8b72ed5.js"><link rel="prefetch" href="/blog/assets/js/36.ae5b409a.js"><link rel="prefetch" href="/blog/assets/js/37.e618ee46.js"><link rel="prefetch" href="/blog/assets/js/38.04806802.js"><link rel="prefetch" href="/blog/assets/js/39.8d9b9563.js"><link rel="prefetch" href="/blog/assets/js/4.0d191ff1.js"><link rel="prefetch" href="/blog/assets/js/40.04518f3a.js"><link rel="prefetch" href="/blog/assets/js/41.6bf1718b.js"><link rel="prefetch" href="/blog/assets/js/42.a3dfedee.js"><link rel="prefetch" href="/blog/assets/js/43.a8d95aa2.js"><link rel="prefetch" href="/blog/assets/js/44.3a12c49e.js"><link rel="prefetch" href="/blog/assets/js/45.d5d98979.js"><link rel="prefetch" href="/blog/assets/js/46.234ac3a9.js"><link rel="prefetch" href="/blog/assets/js/47.33679be5.js"><link rel="prefetch" href="/blog/assets/js/48.91dd4a4d.js"><link rel="prefetch" href="/blog/assets/js/49.278c8abb.js"><link rel="prefetch" href="/blog/assets/js/5.9b1c580e.js"><link rel="prefetch" href="/blog/assets/js/50.acb96b49.js"><link rel="prefetch" href="/blog/assets/js/51.32188c4f.js"><link rel="prefetch" href="/blog/assets/js/52.ec8a6f44.js"><link rel="prefetch" href="/blog/assets/js/53.440af944.js"><link rel="prefetch" href="/blog/assets/js/54.85b002c5.js"><link rel="prefetch" href="/blog/assets/js/55.714cdb2c.js"><link rel="prefetch" href="/blog/assets/js/56.5a19f6c9.js"><link rel="prefetch" href="/blog/assets/js/57.03e1b8a3.js"><link rel="prefetch" href="/blog/assets/js/58.640f7bb7.js"><link rel="prefetch" href="/blog/assets/js/59.04ab8dd2.js"><link rel="prefetch" href="/blog/assets/js/6.b37cc082.js"><link rel="prefetch" href="/blog/assets/js/60.51243e5b.js"><link rel="prefetch" href="/blog/assets/js/61.869879d3.js"><link rel="prefetch" href="/blog/assets/js/62.19e9997a.js"><link rel="prefetch" href="/blog/assets/js/63.fa0d4e9e.js"><link rel="prefetch" href="/blog/assets/js/64.dcbb7569.js"><link rel="prefetch" href="/blog/assets/js/65.b0aee567.js"><link rel="prefetch" href="/blog/assets/js/66.c2239c63.js"><link rel="prefetch" href="/blog/assets/js/67.52c784b8.js"><link rel="prefetch" href="/blog/assets/js/68.39a7efed.js"><link rel="prefetch" href="/blog/assets/js/69.37845d77.js"><link rel="prefetch" href="/blog/assets/js/7.b1a72256.js"><link rel="prefetch" href="/blog/assets/js/70.eefd97a9.js"><link rel="prefetch" href="/blog/assets/js/71.ccd32287.js"><link rel="prefetch" href="/blog/assets/js/72.118662a5.js"><link rel="prefetch" href="/blog/assets/js/73.9d654570.js"><link rel="prefetch" href="/blog/assets/js/74.abbd1d57.js"><link rel="prefetch" href="/blog/assets/js/75.db0ef567.js"><link rel="prefetch" href="/blog/assets/js/76.2165a22a.js"><link rel="prefetch" href="/blog/assets/js/77.4ad54d5b.js"><link rel="prefetch" href="/blog/assets/js/79.6ebfbc85.js"><link rel="prefetch" href="/blog/assets/js/8.357c92c0.js"><link rel="prefetch" href="/blog/assets/js/80.78ce848e.js"><link rel="prefetch" href="/blog/assets/js/81.f420c368.js"><link rel="prefetch" href="/blog/assets/js/82.7c9a721b.js"><link rel="prefetch" href="/blog/assets/js/83.794915fc.js"><link rel="prefetch" href="/blog/assets/js/84.6a53c0fe.js"><link rel="prefetch" href="/blog/assets/js/85.2effe18f.js"><link rel="prefetch" href="/blog/assets/js/86.6a8b7025.js"><link rel="prefetch" href="/blog/assets/js/87.93ed8a37.js"><link rel="prefetch" href="/blog/assets/js/88.e446a59e.js"><link rel="prefetch" href="/blog/assets/js/9.b2e3f63a.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.00fe1ddf.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/img/晴朗.png" alt="Smile ^o^" class="logo"> <span class="site-name can-hide">Smile ^o^</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="自学" class="dropdown-title"><span class="title">自学</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/guide/sourceCode/1.html" class="nav-link">框架源码相关内容</a></li><li class="dropdown-item"><!----> <a href="/blog/guide/stylesCode/3.html" class="nav-link">样式相关内容</a></li><li class="dropdown-item"><!----> <a href="/blog/guide/weixinCode/1.html" class="nav-link">小程序</a></li><li class="dropdown-item"><!----> <a href="/blog/guide/nodeCode/1.html" class="nav-link">Node</a></li><li class="dropdown-item"><!----> <a href="/blog/guide/jsCommonCode/1.html" class="nav-link">JS专题</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工作" class="dropdown-title"><span class="title">工作</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/config/sourceCode/1.html" class="nav-link">webpack相关内容</a></li><li class="dropdown-item"><!----> <a href="/blog/config/stylesCode/1.html" class="nav-link">样式相关内容</a></li><li class="dropdown-item"><!----> <a href="/blog/config/jsCode/1.html" class="nav-link">其他</a></li><li class="dropdown-item"><!----> <a href="/blog/config/errorCode/1.html" class="nav-link">问题</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="语言" class="dropdown-title"><span class="title">语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/language/English/1.html" class="nav-link">英语相关内容</a></li><li class="dropdown-item"><!----> <a href="/blog/language/Japanese/1.html" class="nav-link">日语相关内容</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/other/network/1.html" class="nav-link">网络相关内容</a></li><li class="dropdown-item"><!----> <a href="/blog/other/algorithm/1.html" class="nav-link">算法相关内容</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/He-Shanshan/blog.git" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="自学" class="dropdown-title"><span class="title">自学</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/guide/sourceCode/1.html" class="nav-link">框架源码相关内容</a></li><li class="dropdown-item"><!----> <a href="/blog/guide/stylesCode/3.html" class="nav-link">样式相关内容</a></li><li class="dropdown-item"><!----> <a href="/blog/guide/weixinCode/1.html" class="nav-link">小程序</a></li><li class="dropdown-item"><!----> <a href="/blog/guide/nodeCode/1.html" class="nav-link">Node</a></li><li class="dropdown-item"><!----> <a href="/blog/guide/jsCommonCode/1.html" class="nav-link">JS专题</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工作" class="dropdown-title"><span class="title">工作</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/config/sourceCode/1.html" class="nav-link">webpack相关内容</a></li><li class="dropdown-item"><!----> <a href="/blog/config/stylesCode/1.html" class="nav-link">样式相关内容</a></li><li class="dropdown-item"><!----> <a href="/blog/config/jsCode/1.html" class="nav-link">其他</a></li><li class="dropdown-item"><!----> <a href="/blog/config/errorCode/1.html" class="nav-link">问题</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="语言" class="dropdown-title"><span class="title">语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/language/English/1.html" class="nav-link">英语相关内容</a></li><li class="dropdown-item"><!----> <a href="/blog/language/Japanese/1.html" class="nav-link">日语相关内容</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/other/network/1.html" class="nav-link">网络相关内容</a></li><li class="dropdown-item"><!----> <a href="/blog/other/algorithm/1.html" class="nav-link">算法相关内容</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/He-Shanshan/blog.git" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>搭建</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>小程序工具及项目结构</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>WXML语法（数据绑定）</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>WXML语法（数据渲染）</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>WXS语法</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>事件系统</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>生命周期和运行机制</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/guide/weixinCode/7.html" class="active sidebar-link">生命周期和运行机制</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/guide/weixinCode/7.html#生命周期和运行机制" class="sidebar-link">生命周期和运行机制</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/guide/weixinCode/7.html#小程序生命周期" class="sidebar-link">小程序生命周期</a></li><li class="sidebar-sub-header"><a href="/blog/guide/weixinCode/7.html#页面生命周期" class="sidebar-link">页面生命周期</a></li><li class="sidebar-sub-header"><a href="/blog/guide/weixinCode/7.html#小程序运行机制" class="sidebar-link">小程序运行机制</a></li></ul></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>页面路由及页面数据传递</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>基础组件介绍</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>自定义组件</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>部署后端</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="生命周期和运行机制"><a href="#生命周期和运行机制" class="header-anchor">#</a> 生命周期和运行机制</h2> <h3 id="小程序生命周期"><a href="#小程序生命周期" class="header-anchor">#</a> 小程序生命周期</h3> <p>App（Object,object）<br>
+注册小程序，接受一个Object参数，其指定小程序的生命周期回调等。<br>
+App()必须在app.js中调用，必须调用且只能调用一次，不然会出现无法预期的后果。<br>
+onLaunch   function  非必填  生命周期回调-监听小程序初始化<br>
+onShow  function  非必填  生命周期回调-监听小程序启动或切后台<br>
+onHide  function  非必填  生命周期回调-监听小程序切后台<br>
+onError  function  非必填  错误监听函数<br>
+onPageNotFound  function  非必填  页面不存在监听函数<br>
+AppObject getApp(Object object)<br>
+获取到小程序全局唯一的App实例。<br>
+tip：<br>
+1.不要在定义于App()内的函数中，或调用App前点用getApp(),使用this就可以拿到app实例。<br>
+2.通过getApp()获取实例之后，不要私自调用生命周期函数。</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">//app.js</span>
+<span class="token comment">//app.js</span>
+<span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token function-variable function">onLaunch</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    wx<span class="token punctuation">.</span><span class="token function">navigateTo</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      url<span class="token punctuation">:</span> <span class="token string">'/page/123'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token comment">// 展示本地存储能力</span>
+    <span class="token keyword">var</span> logs <span class="token operator">=</span> wx<span class="token punctuation">.</span><span class="token function">getStorageSync</span><span class="token punctuation">(</span><span class="token string">'logs'</span><span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    logs<span class="token punctuation">.</span><span class="token function">unshift</span><span class="token punctuation">(</span>Date<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    wx<span class="token punctuation">.</span><span class="token function">setStorageSync</span><span class="token punctuation">(</span><span class="token string">'logs'</span><span class="token punctuation">,</span> logs<span class="token punctuation">)</span>
+
+    <span class="token comment">// 登录</span>
+    wx<span class="token punctuation">.</span><span class="token function">login</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      <span class="token function-variable function">success</span><span class="token punctuation">:</span> <span class="token parameter">res</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 发送 res.code 到后台换取 openId, sessionKey, unionId</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token comment">// 获取用户信息</span>
+    wx<span class="token punctuation">.</span><span class="token function">getSetting</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      <span class="token function-variable function">success</span><span class="token punctuation">:</span> <span class="token parameter">res</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>res<span class="token punctuation">.</span>authSetting<span class="token punctuation">[</span><span class="token string">'scope.userInfo'</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token comment">// 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框</span>
+          wx<span class="token punctuation">.</span><span class="token function">getUserInfo</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            <span class="token function-variable function">success</span><span class="token punctuation">:</span> <span class="token parameter">res</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+              <span class="token comment">// 可以将 res 发送给后台解码出 unionId</span>
+              <span class="token keyword">this</span><span class="token punctuation">.</span>globalData<span class="token punctuation">.</span>userInfo <span class="token operator">=</span> res<span class="token punctuation">.</span>userInfo
+
+              <span class="token comment">// 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回</span>
+              <span class="token comment">// 所以此处加入 callback 以防止这种情况</span>
+              <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>userInfoReadyCallback<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">userInfoReadyCallback</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span>
+              <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">onShow</span><span class="token punctuation">:</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">onHide</span><span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">onError</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">err</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//提交后台将异常</span>
+    console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>err<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">onPageNotFound</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  globalData<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    userInfo<span class="token punctuation">:</span> <span class="token keyword">null</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br></div></div><p>可以通过点击普通编译下拉，添加编译模式来模拟notPageFound生命周期调用。<br>
+如何在其他页面获取到app里面的数据。</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// pages/demo1/demo1.js</span>
+<span class="token keyword">var</span> app <span class="token operator">=</span> <span class="token function">getApp</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">//获取app实例</span>
+<span class="token function">Page</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+
+  <span class="token comment">/**
+   * 页面的初始数据
+   */</span>
+  data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  <span class="token comment">/**
+   * 生命周期函数--监听页面加载
+   */</span>
+  <span class="token function-variable function">onLoad</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">options</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>app<span class="token punctuation">.</span>globalData<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  <span class="token comment">/**
+   * 生命周期函数--监听页面初次渲染完成
+   */</span>
+  <span class="token function-variable function">onReady</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  <span class="token comment">/**
+   * 生命周期函数--监听页面显示
+   */</span>
+  <span class="token function-variable function">onShow</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  <span class="token comment">/**
+   * 生命周期函数--监听页面隐藏
+   */</span>
+  <span class="token function-variable function">onHide</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  <span class="token comment">/**
+   * 生命周期函数--监听页面卸载
+   */</span>
+  <span class="token function-variable function">onUnload</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  <span class="token comment">/**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */</span>
+  <span class="token function-variable function">onPullDownRefresh</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  <span class="token comment">/**
+   * 页面上拉触底事件的处理函数
+   */</span>
+  <span class="token function-variable function">onReachBottom</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  <span class="token comment">/**
+   * 用户点击右上角分享
+   */</span>
+  <span class="token function-variable function">onShareAppMessage</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br></div></div><h3 id="页面生命周期"><a href="#页面生命周期" class="header-anchor">#</a> 页面生命周期</h3> <p>Page(Object object)<br>
+注册小程序中的一个页面，接受一个Object类型参数，其指定页面的初始数据，生命周期回调，事件处理函数等。<br>
+data  Object  页面的初始数据<br>
+onLoad  function 生命周期回调-监听页面<br>
+onShow  function 生命周期回调-监听页面<br>
+onReady  function 生命周期回调-监听页面<br>
+onHide  function 生命周期回调-监听页面<br>
+onUnload  function 生命周期回调-监听页面<br>
+onPullDownRefresh  function  监听用户下拉动作<br>
+onReachBottom  function  页面上拉触事件的处理函数<br>
+onShareAppMessage  function  用户点击右上角转发<br>
+onPageScroll  function  页面滚动触发事件的处理函数<br>
+onResize  function  页面尺寸改变时触发<br>
+onTabItemTap  function  当前时tab页时，点击tab时触发</p> <div class="language-WXML line-numbers-mode"><pre class="language-text"><code>&lt;!--pages/demo1/demo1.wxml--&gt;
+&lt;!-- 列表渲染-下拉刷新 --&gt;
+&lt;view&gt;{{person.name}}&lt;/view&gt;
+&lt;view wx:for=&quot;{{100}}&quot; wx:for-item=&quot;listItem&quot; wx:for-index=&quot;listIndex&quot;&gt;
+{{listIndex+'---'+listItem}}&lt;/view&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// pages/demo1/demo1.js</span>
+<span class="token keyword">var</span> app <span class="token operator">=</span> <span class="token function">getApp</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token function">Page</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+
+  <span class="token comment">/**
+   * 页面的初始数据
+   */</span>
+  data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    person<span class="token punctuation">:</span><span class="token punctuation">{</span>
+      name <span class="token punctuation">:</span> <span class="token string">&quot;Mike&quot;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  <span class="token comment">/**
+   * 生命周期函数--监听页面加载
+   */</span>
+  <span class="token function-variable function">onLoad</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">options</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 这时候就会调用onUnload 页面没有返回按钮 与navigator不一样</span>
+    <span class="token comment">// wx.redirectTo({</span>
+    <span class="token comment">//   url: '/pages/logs/logs',</span>
+    <span class="token comment">// })</span>
+    <span class="token comment">//可以通过使用下面的接口来代替onShareAppMessage</span>
+    <span class="token comment">// wx.showShareMenu({</span>
+      
+    <span class="token comment">// })</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  <span class="token comment">/**
+   * 生命周期函数--监听页面初次渲染完成
+   */</span>
+  <span class="token function-variable function">onReady</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  <span class="token comment">/**
+   * 生命周期函数--监听页面显示
+   */</span>
+  <span class="token function-variable function">onShow</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  <span class="token comment">/**
+   * 生命周期函数--监听页面隐藏
+   */</span>
+  <span class="token function-variable function">onHide</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  <span class="token comment">/**
+   * 生命周期函数--监听页面卸载
+   */</span>
+  <span class="token function-variable function">onUnload</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  <span class="token comment">/**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */</span>
+  <span class="token function-variable function">onPullDownRefresh</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//&quot;enablePullDownRefresh&quot;: true,需要在json里面配置 可以在app.json中配置全局的</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'onPullDownRefresh'</span><span class="token punctuation">)</span>
+    <span class="token comment">// 当数据加载完之后</span>
+    wx<span class="token punctuation">.</span><span class="token function">stopPullDownRefresh</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  <span class="token comment">/**
+   * 页面上拉触底事件的处理函数
+   */</span>
+  <span class="token function-variable function">onReachBottom</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'onReachBottom'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  <span class="token comment">/**
+   * 用户点击右上角分享
+   */</span>
+  <span class="token function-variable function">onShareAppMessage</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">info</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//转发分享可以不真正点击发送</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'onShareAppMessage'</span><span class="token punctuation">,</span>info<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">onPageScroll</span><span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'onPageScroll'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">onResize</span><span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">info</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment">//通过设置&quot;pageOrientation&quot;: &quot;auto&quot;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'onResize'</span><span class="token punctuation">,</span>info<span class="token punctuation">)</span>
+    <span class="token comment">// deviceOrientation: &quot;portrait&quot;</span>
+    <span class="token comment">// size:</span>
+    <span class="token comment">//     screenHeight: 568</span>
+    <span class="token comment">//      screenWidth: 320</span>
+    <span class="token comment">//      windowHeight: 456</span>
+    <span class="token comment">//      windowWidth: 320</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">onTabItemTap</span><span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">info</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment">//并不会触发生命周期函数</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'onTabItemTap'</span><span class="token punctuation">,</span>info<span class="token punctuation">)</span>
+    <span class="token comment">//如果想要触发数据更新</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token punctuation">.</span>person<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">&quot;Amy&quot;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      person<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token punctuation">.</span>person
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br></div></div><h3 id="小程序运行机制"><a href="#小程序运行机制" class="header-anchor">#</a> 小程序运行机制</h3> <h4 id="前台-后台状态"><a href="#前台-后台状态" class="header-anchor">#</a> 前台/后台状态</h4> <p>小程序启动后，界面被展示给用户，此时小程序处于前台状态。<br>
+当用户点击右上角胶囊按钮关闭小程序，或者按了设备Home键离开微信时，小程序并没有完全终止运行，而是进入了后台状态，小程序还可以运行一小段时间。<br>
+当用户再次进入微信或再次打开小程序，小程序又会从后台进入前台，但如果用户很久没有再进入小程序，或者系统资源紧张，小程序可能被销毁，即完全终止运行。</p> <h4 id="小程序启动"><a href="#小程序启动" class="header-anchor">#</a> 小程序启动</h4> <p>小程序启动分为两种情况：一是冷启动，一是热启动。<br>
+1.冷启动：如果用户首次打开，或者小程序销毁后被用户再次打开，此时小程序需要重新加载启动，即冷启动。<br>
+2.热启动：如果用户已经打开过某小程序，然后在一定时间内再次打开该小程序，此时小程序并未被销毁，只是从后台状态进入前台状态，这个过程就是热启动。</p> <h4 id="小程序销毁实际"><a href="#小程序销毁实际" class="header-anchor">#</a> 小程序销毁实际</h4> <p>进入后台一定时间，或者系统资源占用过高，才会被销毁。<br>
+1.当小程序进入后台，可以维持一小段时间的运行状态，如果这段时间内都未进入前台，小程序会被销毁。<br>
+2.当小程序占用系统资源过高，可能会被系统销毁或被微信客户端主动回收。<br>
+2.1在iOS上，当微信客户端在一定时间间隔内（目前未5s）连续收到两次及以上系统内存告警时，会主动进行小程序销毁，并提示用户。<br>
+2.2小程序可以通过使用wx.onMemoryWarning监听内存告警事件，进行必要的内存清理。</p> <blockquote><p>启动场景分类<br>
+A 打开首页：场景值有以下：<br>
+1001 发现栏小程序主入口<br>
+1019 微信支付入口<br>
+1023 安卓系统桌面图标<br>
+1038 从另外一个小程序返回<br>
+1056 音乐播放器菜单<br>
+1089 首页下拉小程序栏</p></blockquote> <p>B 打开小程序指定的某个页面：场景值为除A意外的其他<br>
+不同场景类别的启动将具有不同的行为。<br>
+热启动逻辑<br>
+小程序在热启动时，可能需要立刻跳转到别的页面，如点击分享卡片进入小程序时，此时可能会自动产生一些页面条状。<br>
+当前打开的场景   效果</p> <table><thead><tr><th style="text-align:center;">上一次场景</th> <th style="text-align:center;">当前打开的场景</th> <th style="text-align:center;">效果</th></tr></thead> <tbody><tr><td style="text-align:center;">A</td> <td style="text-align:center;">A</td> <td style="text-align:center;">保留原来的状态</td></tr> <tr><td style="text-align:center;">B</td> <td style="text-align:center;">A</td> <td style="text-align:center;">清空原来的页面栈，打开首页（相当于执行wx.reLaunch到首页）</td></tr> <tr><td style="text-align:center;">A/B</td> <td style="text-align:center;">B</td> <td style="text-align:center;">清空原来的页面栈，打开指定页面（相当于执行wx.reLaunch到指定页）</td></tr></tbody></table> <p>———————————————————————————————
+A类场景的重新启动策略<br>
+小程序被销毁后，下次冷启动如果属于B类场景，将会进入特定的页面。<br>
+下次冷启动如果属于A类场景，默认情况下将会进入小程序的首页。在页面对应的json文件中（也可以全局配置在app.json的window段中），指定<code>restartStrategy</code>配置项可以改变这个默认的行为，使得从某个页面退出后，下次A类场景冷启动可以回到这个页面。</p> <div class="language-json line-numbers-mode"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;restartStrategy&quot;</span><span class="token operator">:</span><span class="token string">&quot;homePage&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p><code>restartStrategy</code>可选值：</p> <table><thead><tr><th style="text-align:center;">可选值</th> <th style="text-align:center;">含义</th></tr></thead> <tbody><tr><td style="text-align:center;">homePage</td> <td style="text-align:center;">(默认值)如果从这个页面退出小程序，下次将从首页冷启动</td></tr> <tr><td style="text-align:center;">homePageAndLastestPage</td> <td style="text-align:center;">如果从这个页面退出小程序，下次冷启动后立刻加载这个页面，页面的参数保持不变（不可用于tab页）</td></tr></tbody></table> <p>———————————————————————————————
+tip：即使不配置<code>homePage</code>，小程序如果退出过久（当前默认一天，可以使用退出状态调整），下次冷启动时也将不再遵循<code>restartStrategy</code>的配置，而是直接从首页冷启动。<br>
+无论如何，页面中的状态并不会被保留，如输入框的文本内容，chenckbox的勾选状态等都不会还原，如果需要还原或部分还原，需要利用退出状态。</p> <blockquote><p>退出状态</p></blockquote> <p>每当小程序可能被销毁之前，页面回调函数<code>onSaveExitState</code>会被调用。如果想保留页面中的状态，可以在这个回调函数中保存一些数据，下次启动时可以通过<code>exitState</code>获得这些已保存数据。</p> <div class="language-json line-numbers-mode"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;restartStrategy&quot;</span><span class="token operator">:</span><span class="token string">&quot;homePage&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token function">Page</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token function-variable function">onLoad</span><span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">var</span> prevExitState <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>exitState <span class="token comment">//尝试获得上一次退出前onSaveExitState保存的数据</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>prevExitState <span class="token operator">!==</span> <span class="token keyword">undefined</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token comment">// 如果是根据restartStrategy配置进行的冷启动，就可以获得到</span>
+      prevExitState<span class="token punctuation">.</span>myDataField <span class="token operator">===</span> <span class="token string">'myData'</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">onSaveExitState</span><span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">var</span> exitState <span class="token operator">=</span> <span class="token punctuation">{</span>myDataField <span class="token punctuation">:</span> <span class="token string">'myData'</span><span class="token punctuation">}</span> <span class="token comment">// 需要保存的数据</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      data<span class="token punctuation">:</span> exitState<span class="token punctuation">,</span>
+      expireTimeStamp<span class="token punctuation">:</span> Date<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">24</span> <span class="token operator">*</span> <span class="token number">60</span> <span class="token operator">*</span> <span class="token number">60</span> <span class="token operator">*</span> <span class="token number">1000</span> <span class="token comment">// 超时时刻</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p><code>onSaveExitState</code>返回值可以包含两项：</p> <table><thead><tr><th style="text-align:center;">字段名</th> <th style="text-align:center;">类型</th> <th style="text-align:center;">含义</th></tr></thead> <tbody><tr><td style="text-align:center;">data</td> <td style="text-align:center;">any</td> <td style="text-align:center;">需要保存的数据（只能是JSON兼容的数据）</td></tr> <tr><td style="text-align:center;">expireTimeStamp</td> <td style="text-align:center;">Number</td> <td style="text-align:center;">超时时刻，在这个时刻后，保存的数据一定被丢弃，默认为（当时时刻+1天）</td></tr></tbody></table> <p>———————————————————————————————
+tip：<br>
+1.如果超过<code>expireTimeStamp</code>，保存的数据将被丢弃，且冷启动时不遵循<code>restartStrategy</code>的配置，而是直接从首页冷启动。<br>
+2.<code>expireTimeStamp</code>可能会被提前，比如可续断需要清理数据的时候。<br>
+3.在小程序存货期间，<code>onSaveExitState</code>可能会被多次调用，此时以最后一次调用结果作为最终结果。<br>
+4.在一些特殊情况下（比如客户端直接被系统杀死），这个方法也不会被调用，下次冷启动也不会遵循<code>restartStrategy</code>的配置，而是直接从首页冷启动。</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">last Updated:</span> <span class="time">7/27/2020, 11:01:27 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/guide/weixinCode/6.html" class="prev">事件系统</a></span> <span class="next"><a href="/blog/guide/weixinCode/8.html">页面路由及页面数据传递</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/blog/assets/js/app.691678be.js" defer></script><script src="/blog/assets/js/2.ba034f29.js" defer></script><script src="/blog/assets/js/78.53f09210.js" defer></script>
+  </body>
+</html>
